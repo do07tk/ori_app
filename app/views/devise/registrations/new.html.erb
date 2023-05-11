@@ -1,0 +1,43 @@
+<%= render "template/header" %>
+
+
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h3 class='form-header-text'>
+        新規ユーザー登録
+      </h3>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">Nickname</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :nickname, class:"input-default", id:"nickname", maxlength:"40" %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">Email</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">Password</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.password_field :password, class:"input-default", id:"password" %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">Password（確認）</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation" %>
+    </div>
+    <div class='register-btn'>
+      <%= f.submit "Sign up" ,class:"register-red-btn" %>
+    </div>
+  </div>
+<% end %>

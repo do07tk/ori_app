@@ -1,0 +1,31 @@
+<%= render "template/header" %>
+
+
+<div class = "album py-5 bg-light">
+  <div class = "items-sell-title">お気に入りページ</div>
+  <div class = "container">
+    <div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <% @tweets.each do |tweet| %>
+        <div class = "col pb-4">
+          <div class = "card shadow-sm">
+            <%= image_tag tweet.image %>
+            <div class = "card-body">
+              <p class = "card-text">
+                <%= tweet.title %>
+              </p>
+              <div class = "d-flex justify-content-between align-items-center">
+                <div class = "btn-group">
+                  <%= link_to "Show", tweet_path(tweet.id), class: "btn btn-sm btn-outline-secondary", style: "border-radius: 5px;" %>
+                  <div id = "like-btn<%= tweet.id %>">
+                    <%= render partial: "likes/like", locals: { tweet: tweet } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

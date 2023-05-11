@@ -1,0 +1,45 @@
+<%= render "template/header" %>
+
+
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">投稿内容を入力</h2>
+    <%= form_with model: @tweet, url: tweets_path, local: true do |f| %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        Image
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        Title
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :title, class:"items-text", id:"item-name", placeholder:"Title", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          Content
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"Content" ,rows:"5" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+
+</div>
