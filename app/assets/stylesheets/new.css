@@ -111,4 +111,7 @@
 .back-btn:hover{
   color: white;
 }
+.sell-btn, .back-btn {
+  border-radius: 50px;
+}
 /* 下部ボタン */

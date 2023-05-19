@@ -8,7 +8,7 @@
 
     <div class="img-upload">
       <div class="weight-bold-text">
-        Image
+        画像
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
@@ -21,13 +21,13 @@
 
     <div class="new-items">
       <div class="weight-bold-text">
-        Title
+        タイトル
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_field :title, class:"items-text", id:"item-name", placeholder:"Title", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-          Content
+          内容
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"Content" ,rows:"5" ,maxlength:"1000" %>

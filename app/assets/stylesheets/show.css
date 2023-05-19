@@ -76,6 +76,9 @@
   border: 1px solid black;
   text-decoration: none;
 }
+.item-edit, .item-destroy {
+  border-radius: 50px;
+}
 .item-edit:hover{
   background: darkblue;
 }
