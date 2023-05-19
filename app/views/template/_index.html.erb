@@ -1,0 +1,44 @@
+<main>
+
+  <section class = "py-5 text-center containers">
+    <div class = "row gx-0 py-lg-5">
+      <div class = "col-lg-6 col-md-8 mx-auto">
+        <h1 class = "fw-light">Error Messages</h1>
+        <p class = "lead text-muted">Post your error message! The content of the post is an image, the name of the person who posted it, and the contents.</p>
+        <% if user_signed_in? %>
+          <%= link_to "New Tweet", new_tweet_path, class: "btn btn-primary my-2" %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <div class = "album py-5">
+    <div class = "container">
+      <div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <% @tweets.each do |tweet| %>
+          <div class = "col pb-4">
+            <div class = "card shadow-sm">
+              <%= image_tag tweet.image %>
+              <div class = "card-body">
+                <p class = "card-text">
+                  <%= tweet.title %>
+                </p>
+                <div class = "d-flex justify-content-between align-items-center">
+                  <div class = "btn-group">
+                    <%= link_to "詳細", tweet_path(tweet.id), class: "btn btn-sm btn-outline-secondary", style: "border-radius: 5px;" %>
+                    <% if user_signed_in? %>
+                      <div id = "like-btn<%= tweet.id %>">
+                        <%= render partial: "likes/like", locals: { tweet: tweet } %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</main>

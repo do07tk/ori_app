@@ -1,16 +1,18 @@
 /* 商品の概要 */
 
 .item-show {
-  /* background-color: #f8f8f8; */
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 5vh 0; */
+}
+
+.name {
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: yellow;
 }
 
 .item-box {
-  /* background-color: #FFF; */
   width: 70vw;
   padding: 5vh 15vw;
   display: flex;
@@ -28,7 +30,6 @@
   height: 30vh;
   width: 36vw;
   min-height: 500px;
-  /* background-color: rgb(205, 202, 202); */
   object-fit: contain;
 }
 
@@ -50,7 +51,6 @@
 
 .content-box {
   font-size: 16px;
-  padding-bottom: 50px;
   width: 30vw;
   word-wrap: break-word;
 }
@@ -89,7 +89,7 @@
 
 .btn-content {
   width: 100%;
-  padding: 0 50px;
+  padding: 50px 50px;
   display: flex;
   justify-content: space-between;
 }

@@ -1,11 +1,11 @@
 <%= render "template/header" %>
 
-<div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
+<div class = "item-show">
+  <div class = "item-box">
+    <h2 class = "name">
       <%= @tweet.title %>
     </h2>
-    <div class="item-img-content">
+    <div class = "item-img-content">
       <%= image_tag @tweet.image ,class:"item-box-img" %>
     </div>
     <div class = "content-box">
@@ -20,12 +20,4 @@
       </div>
     <% end %>
   </div>
-
-  <%# <div class="option">
-    <div class="favorite-btn"> %>
-      <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-      <%# <span>お気に入り 0</span>
-    </div>
-  </div> %>
-
 </div>

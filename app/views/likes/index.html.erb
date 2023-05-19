@@ -1,8 +1,8 @@
 <%= render "template/header" %>
 
 
-<div class = "album py-5 bg-light">
-  <div class = "items-sell-title">お気に入りページ</div>
+<div class = "album bg-light">
+  <div class = "items-sell-title py-5">お気に入りページ</div>
   <div class = "container">
     <div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
       <% @tweets.each do |tweet| %>
@@ -29,3 +29,6 @@
   </div>
 </div>
 
+<% if @tweets.any? %>
+  <%= render "template/footer" %>
+<% end %>
