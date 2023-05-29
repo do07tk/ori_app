@@ -1,24 +1,28 @@
-# README
+# アプリケーション名
+エラーデバッガー（Error Debugger）
+# アプリケーション概要	
+プログラムを書いていてエラーが出てしまった時メモが投稿できるアプリケーション
+# URL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テスト用アカウント
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 利用方法
+ヘッダーからユーザー新規登録を行う
+トップページのNew Tweetからエラー文を投稿する
+# アプリケーションを作成した背景
+プログラムを書く時、エラー画面のスクリーンショットを撮りデジタルの形で保存しておきたかったから。
+# 実装予定の機能
+投稿した内容に対してログインユーザー以外もコメントをできるようにする機能
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/8b7ee1181419b5b13572b7d41c6f4853.png)](https://gyazo.com/8b7ee1181419b5b13572b7d41c6f4853)
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/79de3b5f7582c808b77fba03e739df9b.png)](https://gyazo.com/79de3b5f7582c808b77fba03e739df9b)
+# 開発環境
+・フロントエンド
+・バックエンド
+・インフラ
+・テスト
+・エキストエディタ
+・タスク管理
+# 工夫したポイント
+投稿したものにお気に入り機能を追加し、お気に入りにした投稿を一覧で見れるようにした事
