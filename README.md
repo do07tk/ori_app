@@ -8,7 +8,7 @@
 https://oriapp-39076.onrender.com
 
 # テスト用アカウント
-・Basic認証認証パスワード：0713  
+・Basic認証認証パスワード：7401  
 ・Basic認証認証ID：takumi  
 ・メールアドレス：test@test.com  
 ・パスワード：test1111  
